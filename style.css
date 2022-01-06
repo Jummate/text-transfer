@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, #main-container{
+    width: 100%;
+    height: 100%;
+    
+}
+body{
+    font-family: 'Century Gothic','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    font-size:12px;
+}
+#success-msg, #error-msg{
+    display:none;
+    color: lime;
+    font-size: 1.1rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#error-msg{
+    color: red; 
+}
+#overlay{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ctn-close{
+    display:flex;
+    padding: 4px;
+    padding-left: 5px;
+    background-color: white;
+    text-align: left;
+    width: 95%;
+    justify-content: space-between
+}
+#ctn-search{
+    width:200px;
+    
+}
+#search{
+    font-size:0.6rem;
+    letter-spacing: 2px;
+}
+#text-table{
+    width: 95%;
+    height:90%;
+    padding: 5px;
+    background-color:#fff;
+    overflow:auto;
+}
+tbody{
+    /* font-size: 0.7rem; */
+}
+.tableRow{
+    word-break: break-all;
+    font-size: 0.6rem;
+}
+.textInput{
+   font-size: 0.6rem;
+   width: 100px;
+}
+header{
+    height:8%;
+    display:flex;
+    align-items: center;
+    padding: 0 10px;
+    background-color: #000;
+    color:tomato;
+    justify-content: space-between;
+}
+h4{
+    color: #fff;
+    text-shadow: 2px 2px 5px green;
+}
+main{
+    height:84%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)), url('./asset/boat.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+footer{
+    background-color: #000;
+    color:tomato;
+    height:8%;
+}
+#text-container{
+    height:98%;
+    width:98%;
+    box-shadow: 2px 2px 6px gray, -2px -2px 6px gray;
+}
+textarea{
+    height: 90%;
+    width:100%;
+    outline: none;
+    padding:20px;
+    color: green;
+    background-color: #000;
+    font-weight:bold;
+    font-size: 1.1rem;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+form{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchButton, label{
+    background-color: #000 !important;
+    color:tomato !important;
+    font-size:0.8rem !important;
+}
+#ctn-description{
+    
+}
+#description{
+    border-radius: 0px;
+    font-size:0.8rem;
+}
+#save, #clear, .scroll{
+    padding: 10px;
+    background-color: green;
+    color:#fff;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 1px 1px 6px gray, -1px -1px 6px gray;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    border: none;
+    cursor:pointer;
+}
+#save:hover, #clear:hover, .scroll:hover{
+    background-color: #000;
+    color: #fff
+}
+#scrollContainer{
+    z-index:500px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left:2.5%;
+    bottom: 20px;
+    width:95%;
+}
+.scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+}
+#clear{
+    background-color:maroon;
+    margin-left:10px;
+}
+.peek-icon{
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.peek-icon:hover{
+    color: tomato;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    
+}
+footer p{
+    opacity:0.7;
+    font-size: 0.6rem;
+}
+footer span{
+    font-size: 0.9rem;
+    opacity:1.0;
+    text-shadow: 1px 1px 0.5px lightgray;
+}
+.fa-trash, .fa-copy, .fa-close{
+    font-size:1.7rem;
+    color:tomato;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fa-copy{
+    color:green;
+}
+.fa-close{
+    color: red;
+}
+
+.pageButton{
+    background-color: blue;
+    color:white;
+}
+#paginationContainer{
+    display: none;
+}
+.pageNavButton{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    outline:none;
+    border: none;
+    cursor:pointer;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.pageNavButton:hover{
+    background-color: blue;
+    color:white;
+    opacity:0.6;
+}
+.btn-nav{
+    background-color: green;
+    color: white;
+}
+.btn-nav:hover{
+    opacity: 0.6
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1.0;
+    }
+    25% {
+        opacity: 0.7;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width:420px){
+    #text-container{
+        max-width: 700px;
+    }
+    .textInput{
+        width:100%;
+        font-size: 0.75rem;
+    }
+    .tableRow{
+        font-size: 0.8rem;
+    }
+    #ctn-search{
+        width:300px
+    }
+    #scrollContainer{
+        display: none;
+    }
+    footer p{
+        font-size:0.9rem;
+    }
+    footer span{
+        font-size: 1.1rem;
+        
+    }
+}
